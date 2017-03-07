@@ -1,0 +1,36 @@
+{
+  "name": "sofanerd",
+  "version": "0.0.1",
+  "description": "Mediatracker Sofanerd",
+  "main": "index.js",
+  "scripts": {
+    "start": "DEBUG=sofanerd.* babel-node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AraanBranco/sofanerd.git"
+  },
+  "keywords": [
+    "nodejs",
+    "mediatracker",
+    "hapijs"
+  ],
+  "author": "Araan Branco <araan666@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AraanBranco/sofanerd/issues"
+  },
+  "homepage": "https://github.com/AraanBranco/sofanerd#readme",
+  "dependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-latest": "^6.22.0",
+    "bluebird": "^3.5.0",
+    "debug": "^2.6.1",
+    "dotenv": "^4.0.0",
+    "glob": "^7.1.1",
+    "hapi": "^16.1.0",
+    "joi": "^10.2.2",
+    "mongoose": "^4.8.6"
+  }
+}
