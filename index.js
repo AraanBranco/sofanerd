@@ -2,7 +2,9 @@
 import Hapi from 'hapi';
 import dotenv from 'dotenv';
 import Debug from 'debug';
+import JWT from 'hapi-auth-jwt2';
 import Models from './models';
+import Auth from './plugins/auth';
 import Routes from './plugins/routes';
 
 dotenv.config();
@@ -19,6 +21,8 @@ server.connection({
 });
 
 let initializer = [
+  JWT,
+  Auth,
   Models,
   Routes
 ];

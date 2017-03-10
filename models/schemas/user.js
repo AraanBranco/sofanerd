@@ -1,5 +1,6 @@
 
 import mongoose from 'mongoose';
+import { hash } from '../../helpers/bcrypt';
 
 const Schema = mongoose.Schema;
 
@@ -7,8 +8,8 @@ const schema = new Schema({
   username: { type: String },
   name: { type: String },
   email: { type: String },
-  password: { type: String },
-  roles: { type: Array, default: ['user', 'authenticated'] },
+  password: { type: String, set: hash },
+  roles: { type: Array, default: ['user'] },
   favorites: [],
   collections: [],
   reactions: [{

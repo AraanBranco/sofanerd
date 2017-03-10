@@ -7,7 +7,7 @@ const debug = Debug('sofanerd.models');
 const register = (server, options, next) => {
   const dbConenction = db.connect('sofanerd').connection;
 
-  debug('Models initialize');
+  debug('Inicialize Models');
   require('./movie').model(dbConenction);
   require('./serie').model(dbConenction);
   require('./user').model(dbConenction);
