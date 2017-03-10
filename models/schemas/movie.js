@@ -7,25 +7,18 @@ const schema = new Schema({
   id_imdb: {
     type: Number
   },
-  id_moviedb: {
-    type: String
-  },
   name: {
     type: String,
     required: true
   },
   slug: {
-    type: String,
-    required: true
+    type: String
   },
   description: {
     type: String
   },
-  runtime: {
-    type: String
-  },
-  networks: {
-    type: String
+  year: {
+    type: Number
   },
   genre: {
     type: String
@@ -33,11 +26,20 @@ const schema = new Schema({
   country: {
     type: String
   },
-  status_show: {
+  director: {
+    type: String
+  },
+  writer: {
     type: String
   },
   trailer: {
     type: String
+  },
+  published: {
+    type: Array
+  },
+  featured: {
+    type: Array
   },
   checkins: [{
     user_id: {
@@ -64,9 +66,7 @@ const schema = new Schema({
   }],
   favorites: [],
   collections: [],
-  seasons: [],
   comments: []
 });
-
 
 export default schema;

@@ -2,6 +2,7 @@
 import Hapi from 'hapi';
 import dotenv from 'dotenv';
 import Debug from 'debug';
+import Models from './models';
 import Routes from './plugins/routes';
 
 dotenv.config();
@@ -18,6 +19,7 @@ server.connection({
 });
 
 let initializer = [
+  Models,
   Routes
 ];
 
